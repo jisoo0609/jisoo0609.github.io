@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Analytic - Basic
-date: 2025-05-21 13:00:00 +0900
+date: 2025-06-23 14:00:00 +0900
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: # Add image post (optional)
 fig-caption: # Add figcaption (optional)
@@ -26,7 +26,7 @@ data’ 파일에서 남자와 여자의 나이를 box plot으로 만들어 비�
 > boxplot(subset(data, Gender == "M")$Age, subset(data, Gender == "F")$Age, col = c("blue", "red"), names=c("male", "female"), main = "Age between male and female", ylab="Age")
 ```
 
-![Untitled](/assets/img/posts/Bio-Informatics/Data-Analytic-Basic/Untitled.png)
+![Untitled](/assets/img/posts/bio-informatics/data-analytic-basic/Untitled.png)
 
 ---
 
@@ -41,7 +41,7 @@ data’ 파일에서 남자와 여자의 나이를 box plot으로 만들어 비�
 > barplot(t2dSmo, col = c("red", "green"), names = c("Nonsmoker", "Smoker"), main ="T2D vs Smoking", ylab = "Number")
 ```
 
-![Untitled](/assets/img/posts/Bio-Informatics/Data-Analytic-Basic/Untitled%201.png)
+![Untitled](/assets/img/posts/bio-informatics/data-analytic-basic/Untitled%201.png)
 
 ---
 
@@ -63,7 +63,7 @@ data’ 파일에서 제2형 당뇨병 환자의 남녀 비율을 pie plot으로
 > pie(tot, labels = lab1)
 ```
 
-![Untitled](/assets/img/posts/Bio-Informatics/Data-Analytic-Basic/Untitled%202.png)
+![Untitled](/assets/img/posts/bio-informatics/data-analytic-basic/Untitled%202.png)
 
 - 남녀 숫자의 %값을 소수점 2에서 반올림하여 pie plot에 labling하는 경우
 
@@ -73,7 +73,7 @@ data’ 파일에서 제2형 당뇨병 환자의 남녀 비율을 pie plot으로
 > pie(tot, labels = lab2)
 ```
 
-![Untitled](/assets/img/posts/Bio-Informatics/Data-Analytic-Basic/Untitled%203.png)
+![Untitled](/assets/img/posts/bio-informatics/data-analytic-basic/Untitled%203.png)
 
 ---
 
@@ -90,4 +90,4 @@ strip chart를 만든다.
 > stripchart(wtcom, vertical = T, main = "T2D age",method = "jitter", col = c("green", "red"), xlab ="T2D", ylab = "Number", pch = 5)
 ```
 
-![Untitled](/assets/img/posts/Bio-Informatics/Data-Analytic-Basic/Untitled%204.png)
+![Untitled](/assets/img/posts/bio-informatics/data-analytic-basic/Untitled%204.png)
