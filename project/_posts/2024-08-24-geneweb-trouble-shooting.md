@@ -6,6 +6,7 @@ description: You’ll find this post in your `_posts` directory. Go ahead and ed
 img: # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Time complexity]
+categories: [project]
 ---
 ## 회원가입 시 권한 설정 ERROR
 애플리케이션 실행 시 `admin`계정 create되어야 하는데 `createUser()`에서 오류 발생
