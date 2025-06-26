@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Visualization
-date: 2025-06-23 13:00:00 +0900
+date: 2025-06-23 18:00:00 +0900
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: # Add image post (optional)
 fig-caption: # Add figcaption (optional)
