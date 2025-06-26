@@ -1,0 +1,179 @@
+---
+layout: post
+title: Data Analysis
+date: 2025-06-23 16:00:00 +0900
+description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+img: # Add image post (optional)
+fig-caption: # Add figcaption (optional)
+tags: #Data Analysis
+---
+# Data Analysis
+
+## Summary
+
+
+---
+
+한림대 춘천성심병원에서는 2019년 춘천시민들을 대상으로 건강검진을 수행하여 시민들에 대한 일반정보/생활습관 (file1), 질환 (file2), 신체계측치 (file3), 혈중생화학지표 (file4) 등의 정보를 수집하였다.
+
+## 파일 불러오기
+
+```r
+> file1 <- read_excel("C:/Users/user/Desktop/file1.xlsx")
+> file2 <- read_excel("C:/Users/user/Desktop/file2.xlsx")
+> file3 <- read_excel("C:/Users/user/Desktop/file3.xlsx")
+> file4 <- read_excel("C:/Users/user/Desktop/file4.xlsx")
+
+> library(dplyr)
+```
+
+---
+
+## 개인의 흡연습관에 유의미하게 영향을 받는 질환
+
+```r
+> ex <- full_join(file1, file2, by="sampleID")
+
+> install.packages("openxlsx")
+> library(openxlsx)
+> write.xlsx(ex, sheetName="sheet1", file="ex.xlsx")
+
+> smoX_colX <- 2821
+> smoX_colO <- 91
+> smoO_colX <- 1149
+> smoO_colO <- 939
+
+> sm_col <- matrix(c(2821, 91, 1149, 939), nrow=2)
+> dimnames(sm_col) <- list(c("Smoker", "colonCaner"), c("O", "X"))
+
+> chisq.test(sm_col)
+
+	Pearson's Chi-squared test with Yates' continuity correction
+
+data:  sm_col
+X-squared = 1299.3, df = 1, p-value < 2.2e-16
+
+> smoX_hypX <- 2737
+> smoX_hypO <- 175
+> smoO_hypX <- 414
+> smoO_hypO <- 1674
+> sm_hyper <- matrix(c(2737, 175, 414, 1674), nrow=2)
+> dimnames(sm_hyper) <- list(c("Smoker", "hypertension"), c("O","X"))
+
+> chisq.test(sm_hyper)
+
+	Pearson's Chi-squared test with Yates' continuity correction
+
+data:  sm_hyper
+X-squared = 2866.8, df = 1, p-value < 2.2e-16
+
+> smoX_T2DX <- 1373
+> smoX_T2DO <- 342
+> smoO_T2DX <- 851
+> smoO_T2DO <- 336
+
+> sm_T2D <- matrix(c(1373, 342, 851, 336), nrow=2)
+> dimnames(sm_T2D) <- list(c("Smoker","T2D"), c("O","X"))
+
+> chisq.test(sm_T2D)
+
+	Pearson's Chi-squared test with Yates' continuity correction
+
+data:  sm_T2D
+X-squared = 26.949, df = 1, p-value = 2.089e-07
+```
+
+세 질병 모두 p-val값이 0.05보다 작다. 따라서  흡연습관과 각 질환과의 발생율과는 관계가 없다는 귀무가설을 기각한다.
+
+즉, 세 질병 모두 흡연습관에 유의미하게 영향을 받는다는 것을 알 수 있다.
+
+---
+
+## 공분산 (covariance) 및 상관계수(correlation coefficient)
+
+신체계측치와 혈중생화학지표들을 포함하는 연속성변수(continuous variable)들 간의 산점도(scatter plot)를 생성한 후 이 plot으로부터 변수들 간에 강한 상관성을 보이는 두 변수들을 확인하고 이 두 변수들 사이의 공분산 (covariance) 및 상관계수(correlation coefficient)를 구한다.
+
+### scatter plot
+
+```r
+> ex1 <- file1[,c(1,3)]
+> ex2 <- full_join(ex1, file3, by="sampleID")
+> ex2 <- full_join(ex2,file4, by= "sampleID")
+
+> ex2$hip <- as.numeric(ex2$hip)
+Warning message:
+NAs introduced by coercion 
+> ex2$waist <- as.numeric(ex2$waist)
+Warning message:
+NAs introduced by coercion 
+> ex2$weight <- as.numeric(ex2$weight)
+Warning message:
+NAs introduced by coercion 
+> ex2$DBP <- as.numeric(ex2$DBP)
+Warning message:
+NAs introduced by coercion 
+> ex2$FPG <- as.numeric(ex2$FPG)
+Warning message:
+NAs introduced by coercion 
+
+> ex2[is.na(ex2)] <-0
+> plot(ex2[,c(2:10)])
+```
+
+![Untitled](/assets/img/posts/bio-informatics/data-analysis/Untitled.png)
+
+```r
+> cor(ex2[,c(2:10)])
+                AGE        waist         hip       height
+AGE     1.000000000  0.022115435 0.009258098 -0.004370613
+waist   0.022115435  1.000000000 0.590347193  0.124223986
+hip     0.009258098  0.590347193 1.000000000  0.208377381
+height -0.004370613  0.124223986 0.208377381  1.000000000
+weight  0.009066112  0.669256645 0.670281438  0.607667848
+SBP     0.368929249  0.007064516 0.002852170 -0.008458211
+DBP     0.197792123  0.011954588 0.014203352 -0.004872357
+HBA1C   0.182911692 -0.004221787 0.009300912 -0.003540694
+FPG    -0.070339626  0.011872592 0.004552931 -0.002294604
+             weight          SBP          DBP        HBA1C
+AGE     0.009066112  0.368929249  0.197792123  0.182911692
+waist   0.669256645  0.007064516  0.011954588 -0.004221787
+hip     0.670281438  0.002852170  0.014203352  0.009300912
+height  0.607667848 -0.008458211 -0.004872357 -0.003540694
+weight  1.000000000 -0.006168509  0.003447631 -0.007567453
+SBP    -0.006168509  1.000000000  0.784274339  0.136988762
+DBP     0.003447631  0.784274339  1.000000000  0.087994572
+HBA1C  -0.007567453  0.136988762  0.087994572  1.000000000
+FPG    -0.001900454  0.019673734  0.051600801  0.369962550
+                FPG
+AGE    -0.070339626
+waist   0.011872592
+hip     0.004552931
+height -0.002294604
+weight -0.001900454
+SBP     0.019673734
+DBP     0.051600801
+HBA1C   0.369962550
+FPG     1.000000000
+```
+
+### 공분산 (covariance) 및 상관계수(correlation coefficient)
+
+```r
+> DBP <- ex2$DBP
+> SBP <- ex2$SBP
+
+> cov(DBP, SBP)
+[1] 175.6528
+> cor.test(DBP, SBP)
+
+	Pearson's product-moment correlation
+
+data:  DBP and SBP
+t = 89.368, df = 4998, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.7733677 0.7947169
+sample estimates:
+      cor 
+0.7842743 
+```
