@@ -6,6 +6,7 @@ description: You’ll find this post in your `_posts` directory. Go ahead and ed
 img: # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [CPU Scheduling]
+categories: [posts, study, cs]
 ---
 ---
 # CPU 스케쥴링

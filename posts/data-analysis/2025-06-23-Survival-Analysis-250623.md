@@ -5,7 +5,8 @@ date: 2025-06-23 17:00:00 +0900
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: # Add image post (optional)
 fig-caption: # Add figcaption (optional)
-tags: #Survival Analysis
+tags: [Survival Analysis]
+categories: [posts, data-analysis]
 ---
 # Survival Analysis
 선택한 암종(cancer type)에 대하여 UCSC Xena ([https://xena.ucsc.edu/)](https://xena.ucsc.edu/)) 사이트에서 survival data와 phenotype data를 다운받아 다음의 survival analysis를 실행한다.

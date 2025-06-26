@@ -5,7 +5,8 @@ date: 2025-06-23 14:00:00 +0900
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: # Add image post (optional)
 fig-caption: # Add figcaption (optional)
-tags: #데이터분석
+tags: [데이터분석]
+categories: [posts, data-analysis]
 ---
 # Data Analytic - Basic
 
