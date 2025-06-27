@@ -203,6 +203,8 @@ defaults:
       permalink: /:title/
 
 sass:
+  load_paths:
+    - node_modules
   style: compressed
 
 compress_html:
