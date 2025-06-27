@@ -200,7 +200,7 @@ defaults:
       type: tabs # see `site.collections`
     values:
       layout: page
-      permalink: /:title/
+      permalink: /posts/:title/
 
 sass:
   style: compressed
