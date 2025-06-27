@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[Project] WorkMate-240322"
+title: "[Project] WorkMate"
 date: 2024-03-22 13:32:20 +0900
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+description: 240322 To Do
 img: # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 categories: [project, work-mate]

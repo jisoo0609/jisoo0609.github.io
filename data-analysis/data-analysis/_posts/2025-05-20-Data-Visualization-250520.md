@@ -2,7 +2,7 @@
 layout: post
 title: Data Visualization
 date: 2025-06-23 18:00:00 +0900
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+description: 여러 공공데이터를 수집하고, 이를 R로 분석한 후 시각화
 img: # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [공공데이터, 데이터시각화]

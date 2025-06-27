@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 240824 Trouble Shooting - 회원가입 시 권한 설정 ERROR
-date: 2024-04-01 13:32:20 +0900
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+title: 회원 가입 시 권한 설정 
+date: 2024-08-24 13:32:20 +0900
+description: 회원가입 시 권한 설정 ERROR
 img: # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Time complexity]

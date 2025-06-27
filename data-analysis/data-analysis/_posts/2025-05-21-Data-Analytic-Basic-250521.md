@@ -2,7 +2,7 @@
 layout: post
 title: Data Analytic - Basic
 date: 2025-06-23 14:00:00 +0900
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+description: box plot / bar plot / pie plot / strip chart
 img: # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [데이터분석]
@@ -19,7 +19,7 @@ categories: [data-analysis]
 </details>
 ---
 
-## Box plot
+## box plot
 
 data’ 파일에서 남자와 여자의 나이를 box plot으로 만들어 비교한다.
 
