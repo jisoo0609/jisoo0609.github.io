@@ -25,15 +25,6 @@ description: >- # used by seo meta and the atom feed
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
 url: "https://jisoo0609.github.io/"
 
-# Author Settings
-author: JISOO PARK # add your name
-about-author: Always hungry to keep learning. # add description
-social-twitter: # add your Twitter handle
-social-facebook: # add your Facebook handle
-social-github: jisoo0609 # add your Github handle
-social-linkedin: # add your Linkedin handle
-social-email: # add your Email address
-
 github:
   username: jisoo0609 # change to your GitHub username
 
@@ -203,8 +194,6 @@ defaults:
       permalink: /:title/
 
 sass:
-  load_paths:
-    - node_modules
   style: compressed
 
 compress_html:
