@@ -56,7 +56,7 @@ text(11,11, "중상 수 최대", cex=0.8, col="blue")
 
 - 실행 결과
 
-![Untitled](/assets/img/posts/data-visualization/Untitled.png)
+![Untitled](/assets/img/posts/data-analysis/data-visualization/Untitled.png)
 
 ### **경상남도 시군구별 교통사고**
 
@@ -90,7 +90,7 @@ text(10,3500, "교통사고 발생 최대 지역: 창원시", cex=0.8 , col="red
 
 - 실행 결과
 
-![Untitled](/assets/img/posts/data-visualization/Untitled%201.png)
+![Untitled](/assets/img/posts/data-analysis/data-visualization/Untitled%201.png)
 
 ## 거주지역의 교통사고에 대한 시각화
 
@@ -111,7 +111,7 @@ legend(1, 350, c(">=300", ">=150", ">=50", ">=20", "<20"), col=c("red","green", 
 
 - 실행 결과
 
-![Untitled](/assets/img/posts/data-visualization/Untitled%202.png)
+![Untitled](/assets/img/posts/data-analysis/data-visualization/Untitled%202.png)
 
 ### **서울특별시 종로구 월별 교통사고 평균**
 
@@ -125,7 +125,7 @@ treemap(data_tm05, vSize="data_tm04", index=c("lab"))
 
 - 실행 결과
 
-![Untitled](/assets/img/posts/data-visualization/Untitled%203.png)
+![Untitled](/assets/img/posts/data-analysis/data-visualization/Untitled%203.png)
 
 ---
 
@@ -147,7 +147,7 @@ mapo.map <- ggmap(g_m) + geom_point(data= mapo, aes(x=WGS84경도, y=WGS84위도
 
 - 실행 결과
 
-![Untitled](/assets/img/posts/data-visualization/Untitled%204.png)
+![Untitled](/assets/img/posts/data-analysis/data-visualization/Untitled%204.png)
 
 ### **서울특별시 종로구 CCTV 설치 현황**
 
@@ -161,7 +161,7 @@ jongno.map <- ggmap(g_m) + geom_point(data=jongnogu, aes(x=WGS84경도, y=WGS84�
 
 - 실행 결과
 
-![Untitled](/assets/img/posts/data-visualization/Untitled%205.png)
+![Untitled](/assets/img/posts/data-analysis/data-visualization/Untitled%205.png)
 
 ---
 
@@ -185,7 +185,7 @@ gmap + geom_point(data = hapjeong_df,
 
 - 실행 결과
 
-![Untitled](/assets/img/posts/data-visualization/Untitled%206.png)
+![Untitled](/assets/img/posts/data-analysis/data-visualization/Untitled%206.png)
 
 ### **서울특별시 종로구 이화동**
 
@@ -201,7 +201,7 @@ gmap + geom_point(data = ihwa_df,
 
 - 실행 결과
 
-![Untitled](/assets/img/posts/data-visualization/Untitled%207.png)
+![Untitled](/assets/img/posts/data-analysis/data-visualization/Untitled%207.png)
 
 ## 관심 있는 주식의 추세를 파악하기 위한 시각화
 
@@ -220,7 +220,7 @@ p
 
 - 실행 결과
 
-![Untitled](/assets/img/posts/data-visualization/Untitled%208.png)
+![Untitled](/assets/img/posts/data-analysis/data-visualization/Untitled%208.png)
 
 ---
 
@@ -238,7 +238,7 @@ ggplot(data = ageg_income, aes(x = ageg, y = mean_income)) +
 
 - 실행 결과
 
-![Untitled](/assets/img/posts/data-visualization/Untitled%209.png)
+![Untitled](/assets/img/posts/data-analysis/data-visualization/Untitled%209.png)
 
 ### **연령대 및 성별 월급 차이**
 
@@ -250,7 +250,7 @@ scale_x_discrete(limits = c("underage", "youth", "middle", "old"))
 
 - 실행 결과
 
-![Untitled](/assets/img/posts/data-visualization/Untitled%2010.png)
+![Untitled](/assets/img/posts/data-analysis/data-visualization/Untitled%2010.png)
 
 ### 연령대 및 성별에 따른 가구원 수 분석
 
@@ -258,8 +258,8 @@ scale_x_discrete(limits = c("underage", "youth", "middle", "old"))
 
 `ggplot()`을 사용해 분석을 진행했다.
 
-![Untitled](/assets/img/posts/data-visualization/Untitled%2011.png)
+![Untitled](/assets/img/posts/data-analysis/data-visualization/Untitled%2011.png)
 
 같은 결과를 `ggplot2()` 을 사용하여 분석하였다.
 
-![Untitled](/assets/img/posts/data-visualization/Untitled%2012.png)
+![Untitled](/assets/img/posts/data-analysis/data-visualization/Untitled%2012.png)

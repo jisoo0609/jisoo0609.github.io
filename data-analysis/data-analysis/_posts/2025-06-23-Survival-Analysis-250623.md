@@ -87,7 +87,7 @@ age > median(age, na.rm = T)=TRUE  259       56     41.4      5.14      9.19
 > plot(fitA, col = 1:4)
 ```
 
-![Untitled](/assets/img/posts/bio-informatics/survival-analysis/Untitled.png)
+![Untitled](/assets/img/posts/data-analysis/bio-informatics/survival-analysis/Untitled.png)
 
 age에 따른 생존률의 차이가 존재하는 것을 확인할 수 있다.
 
@@ -138,7 +138,7 @@ race.demographic=white                                      0.607848
 > plot(fitR)
 ```
 
-![Untitled](/assets/img/posts/bio-informatics/survival-analysis/Untitled%201.png)
+![Untitled](/assets/img/posts/data-analysis/bio-informatics/survival-analysis/Untitled%201.png)
 
 인종에 따른 생존률의 차이가 존재한다.
 
@@ -176,7 +176,7 @@ disease_type=Epithelial Neoplasms, NOS                 0.365     0.366
 > plot(fitDis, col=1:4)
 ```
 
-![Untitled](/assets/img/posts/bio-informatics/survival-analysis/Untitled%202.png)
+![Untitled](/assets/img/posts/data-analysis/bio-informatics/survival-analysis/Untitled%202.png)
 
 disease_type에 따른 생존률의 차이가 존재한다.
 
@@ -205,7 +205,7 @@ bmi.exposures > median(bmi.exposures, na.rm = T)=TRUE      0.245     0.484
 > plot(fitB, col=1:4)
 ```
 
-![Untitled](/assets/img/posts/bio-informatics/survival-analysis/Untitled%203.png)
+![Untitled](/assets/img/posts/data-analysis/bio-informatics/survival-analysis/Untitled%203.png)
 
 bmi.exposures에 따른 생존률의 차이가 존재한다.
 
@@ -229,7 +229,7 @@ deg > median(deg, na.rm = T)=TRUE  283       46     45.7   0.00152   0.00293
 > plot(fitD, col = 1:4)
 ```
 
-![Untitled](/assets/img/posts/bio-informatics/survival-analysis/Untitled%204.png)
+![Untitled](/assets/img/posts/data-analysis/bio-informatics/survival-analysis/Untitled%204.png)
 
 deg에 따른 생존률의 차이가 존재한다.
 
@@ -372,4 +372,4 @@ multiModel <- coxph(formula = Surv(Time, Status == 1)~(age>median(age, na.rm=T))
 > HRplot(multiModel, type=2, show.CI = T, main = "Harzard ratio")
 ```
 
-![Untitled](/assets/img/posts/bio-informatics/survival-analysis/Untitled%205.png)
+![Untitled](/assets/img/posts/data-analysis/bio-informatics/survival-analysis/Untitled%205.png)

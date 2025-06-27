@@ -11,9 +11,9 @@ categories: [project]
 ## 회원가입 시 권한 설정 ERROR
 애플리케이션 실행 시 `admin`계정 create되어야 하는데 `createUser()`에서 오류 발생
 
-![image.png](/assets/img/posts/240824/img1.png)
+![image.png](/assets/img/posts/study/til/240824/img1.png)
 
-![image.png](/assets/img/posts/240824/img2.png)
+![image.png](/assets/img/posts/study/til/240824/img2.png)
 
 ```jsx
 log.info("authority: {}", accountDetails.getAuthorities());
@@ -65,4 +65,4 @@ log.info("authority: {}", accountDetails.getAuthorities());
 
 - 제대로 실행되는 것 확인 가능
 
-![image.png](/assets/img/posts/240824/img3.png)
+![image.png](/assets/img/posts/study/til/240824/img3.png)
