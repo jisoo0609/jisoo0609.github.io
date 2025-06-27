@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-#      - master
+      - master
     paths-ignore:
       - .gitignore
       - README.md
@@ -42,7 +42,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1
+          ruby-version: 3.3
           bundler-cache: true
 
       - name: Build site
@@ -59,8 +59,7 @@ jobs:
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-#          path: "_site${{ steps.pages.outputs.base_path }}"
-          path: "_site"
+          path: "_site${{ steps.pages.outputs.base_path }}"
 
   deploy:
     environment:
