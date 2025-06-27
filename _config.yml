@@ -200,7 +200,7 @@ defaults:
       type: tabs # see `site.collections`
     values:
       layout: page
-      permalink: /posts/:title/
+      permalink: /:title/
 
 sass:
   style: compressed
@@ -224,10 +224,6 @@ exclude:
   - purgecss.js
   - "*.config.js"
   - "package*.json"
-  - "node_modules"
-  - "gulpfile.js"
-  - "package.json"
-  - "yarn.lock"
 
 include:
   - assets
