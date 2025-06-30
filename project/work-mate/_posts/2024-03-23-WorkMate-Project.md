@@ -73,7 +73,7 @@ categories: [project, work-mate]
 `merge`과정에서 변경된 파일로 인해 애플리케이션이 정상적으로 실행되지 않는 오류가 있었다.
 
 애플리케이션 실행 후 오류 로그를 확인했을 때,
-![error](/assets/img/posts/study/til/240322/스크린샷%202024-03-22%20182207.png)
+![error](/assets/img/posts/project/work-mate/240322/240322.png)
 해당 오류가 나는 것을 확인할 수 있었다.
 
 오류는 `OAuth2SuccessHandler`에서 `jwt.secret`주입 과정에 문제가 있다고 명시되어 있었지만, 해당 파일은 오늘 작업 중에 수정한 적이 없었다. 오류가 해결되지 않아 오늘의 `pull Request` 기록을 확인했다.
