@@ -5,7 +5,7 @@ date: 2023-12-13 13:42:20 +0900
 description: 'CS: 자료구조'
 img: # Add image post (optional)
 fig-caption: # Add figcaption (optional)
-tags: [ArrayList, LinkedList, 자료구조, stack, queue, tree, heap]
+tags: [ArrayList, LinkedList, 자료구조, 스택, queue, tree, heap]
 categories: [study, cs]
 ---
 # Stack, Queue, Tree, Heap
