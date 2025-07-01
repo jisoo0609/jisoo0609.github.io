@@ -9,7 +9,7 @@ tags: [Survival Analysis]
 categories: [data-analysis]
 ---
 # Survival Analysis
-선택한 암종(cancer type)에 대하여 [UCSC Xena]([https://xena.ucsc.edu/) 사이트에서 survival data와 phenotype data를 다운받아 다음의 survival analysis를 실행한다.
+선택한 암종(cancer type)에 대하여 [UCSC Xena](https://xena.ucsc.edu/) 사이트에서 survival data와 phenotype data를 다운받아 다음의 survival analysis를 실행한다.
 
 ---
 ## Summary
