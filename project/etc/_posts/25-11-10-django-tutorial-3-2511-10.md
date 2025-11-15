@@ -81,7 +81,7 @@ urlpatterns = [
 "email": "john@example.com"
 }
 ```
-![img.png](../../../assets/img/posts/project/etc/django/3/img8.png)
+![img.png](/assets/img/posts/project/etc/django/3/img8.png)
 ### 2. 토큰 발급
 - POST `/api/v1/token/`
 ```bash
@@ -90,7 +90,7 @@ urlpatterns = [
     "password": "password123"
 }
 ```
-![img.png](../../../assets/img/posts/project/etc/django/3/img.png)
+![img.png](/assets/img/posts/project/etc/django/3/img.png)
 ### 3. 인증이 필요한 작업
 - POST `/api/v1/board/`
 ```bash
