@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[django] Django Tutorial - TEST CRUD API 2"
+title: "[django] Django Tutorial - TEST CRUD API 3"
 date: 2025-11-10 17:32:20 +0900
 description: JWT 인증 추가
 img: # Add image post (optional)
@@ -69,3 +69,35 @@ urlpatterns = [
 - 게시글 API: `/v1/board/`
 - 토큰 발급 `/v1/token`
 - 토큰 갱신 `/v1/token/refresh/`
+
+
+## TEST
+### 1. 회원가입
+- POST `/api/v1/register/`
+```json
+{
+"username": "john",
+"password": "password123",
+"email": "john@example.com"
+}
+```
+![img.png](../../../assets/img/posts/project/etc/django/3/img8.png)
+### 2. 토큰 발급
+- POST `/api/v1/token/`
+```bash
+{
+    "username": "john",
+    "password": "password123"
+}
+```
+![img.png](../../../assets/img/posts/project/etc/django/3/img.png)
+### 3. 인증이 필요한 작업
+- POST `/api/v1/board/`
+```bash
+Headers: Authorization: Bearer <access_token>
+{
+"title": "제목",
+"content": "내용",
+"author": "john"
+}
+```
